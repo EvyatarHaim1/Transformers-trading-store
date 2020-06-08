@@ -1,38 +1,233 @@
+*{
+  margin: 0%;
+}
+
+html, body, .App, .App>div {
+  height: 100%;
+}
+body{
+  background-color:gray;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+ .Links{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  list-style-type: none;
+  text-decoration: none;
+  height:30px;
+  width: 100%
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.Link{
+  text-decoration: none;
   color: white;
+  text-align: center;
+  font-size: 18px;
+} 
+
+#transformers{
+  margin-right: 200px;
 }
 
-.App-link {
-  color: #61dafb;
+.loginDiv{
+width: 500px;
+ margin-top: 150px;
+ height: 280px;
+ background-color: rgb(211, 201, 201);
+ display: inline-block;
+  }
+  .loginHeaders, .buttons{
+    text-align: start;
+    margin-left: 150px;
+    margin-bottom: 10px;
+  }
+  .loginBG, .borderRegister{
+    background-color:gray;
+  }
+  .loginTitle{
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .userDetails {
+    list-style-type: none;
+    display: grid;
+    grid-template-areas: 
+    " a a ";
+  }
+
+  #welcomeUser{
+    font-family: assistent;
+    font-style: italic;
+    padding: 50px;
+  }
+
+  .userContainer{
+    display: inline-block;
+    margin: auto;
+  }
+ 
+
+  .robots{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    list-style-type: none;
+  }
+
+  .robot, .robotPic{
+    width: 250px;
+  }
+
+  .loginTitle{
+    font-size: 30px;
+    font-weight: bolder;
+   
+  }
+  .btn{
+    background-color: #867979;
+    width: 70px;
+    margin-left: 20px;
+    margin-right: 30px;
+    margin-top: 10px;
+  }
+  .btn:hover{
+    background-color: black;
+    color:white
+  }
+
+  .loginPic{
+    width: 200px;
+    padding-bottom: 20px;
+  }
+.transformersTitle{
+  font-family: Assistent;
+  margin-top: 50px;
+  padding-bottom: 50px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.userPicNav{
+border-radius: 10px;
+width: 50px;
+}
+.newUserList{
+  list-style-type: none;
+  display: grid;
+  grid-template-areas: "one one one "
+                       "one one one "
+                       "two two three "
+                       "four four four "
+                       "five five five "
+                       " . six . ";
+}
+.a{grid-area: one;}
+.b{grid-area: two;}
+.c{grid-area: three;}
+.d{grid-area: four;}
+.e{grid-area: five;}
+.f{grid-area: six;}
+
+
+.newUserList > ul:nth-child(1) {
+  align-self: stretch;
+}
+
+li{
+  padding: 15px;
+  text-align: left;
+  margin: auto;
+}
+.register{
+  background-color: rgb(211, 201, 201);
+  max-width: 900px;
+  margin: auto;
+  height: 500px;
+}
+.userPic{
+  width: 100px;
+}
+.HomeTitle{
+  margin-top: 50px;
+  font-family: Assistent;
+  font-size: 50px;
+}
+.homeDescription{
+margin-top: 50px;
+font-family: Assistent;
+font-size: 20px;
+line-height: 200%;
+font-weight: bold;
+}
+.homeDiv, .transformersDiv{
+  padding-top: 50px;
+  margin-top: -50px;
+  background-image: url(https://image.freepik.com/free-photo/silver-shimmery-paper-background_53876-71385.jpg);
+}
+
+.countrySelect{
+  width: 150px;
+}
+
+.inp{
+  max-width: 140px;
+}
+.usersTable{
+  background-color: rgba(35, 85, 99, 0.541);
+  width: 1500px;
+  margin-top: 20px;
+}
+.members{
+  background-color: white;
+  width: 100%;
+}
+.selectDrop{
+  margin-top: 15px;
+  margin-left:100px;
+  float: left;
+  width: 150px;
+  height: 30px;
+  text-align: center;
+  display: inline-block
+}
+.inputSearch{
+  margin-top: 15px;
+  float: left;
+  height: 25px;
+}
+.nav{
+  display: inline-flex;
+  width: 100px;
+  height: 10px;
+  float: left;
+  margin-top: 15px;
+  margin-left: 10px;
+}
+.tableNav{
+  display: block;
+  height: 60px;
+  background-color:#b2ad7f8e;
+}
+table{
+  width:100%;
+}
+
+
+/*Register */
+.newUserTitle{
+  padding-top: "40px";
+   padding-bottom:"40px";
+  display: inline;
+}
+
+.liUploadPicBtn{
+  margin-left:"55px";
+   display:"inline-block";
+}
+
+.video-wrapper{
+  height: 100%;
+ width: 100%;
+ min-height: 225px;
+ margin-left: 500px;
 }

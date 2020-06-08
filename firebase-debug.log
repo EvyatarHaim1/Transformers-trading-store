@@ -1,0 +1,21 @@
+[debug] [2020-06-01T14:15:30.490Z] ----------------------------------------------------------------------
+[debug] [2020-06-01T14:15:30.492Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Evyat\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2020-06-01T14:15:30.492Z] CLI Version:   8.4.1
+[debug] [2020-06-01T14:15:30.492Z] Platform:      win32
+[debug] [2020-06-01T14:15:30.493Z] Node Version:  v14.2.0
+[debug] [2020-06-01T14:15:30.493Z] Time:          Mon Jun 01 2020 17:15:30 GMT+0300 (שעון ישראל (קיץ))
+[debug] [2020-06-01T14:15:30.494Z] ----------------------------------------------------------------------
+[debug] [2020-06-01T14:15:30.494Z] 
+[debug] [2020-06-01T14:15:30.499Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-06-01T14:15:30.500Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Evyat\home\transformers_merchandise_trading_store
+
