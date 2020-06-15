@@ -1,132 +1,126 @@
-// import React,{useState} from 'react'
+// import React, { useContext } from "react";
 // import './App.css';
-// import {BrowserRouter as Router,Route, Link, Switch, Redirect} from "react-router-dom";
+// import {BrowserRouter as Router ,Route, Switch, Redirect} from "react-router-dom";
 // import Transformers from './Components/Transformers';
 // import Members from './Components/Members';
 // import NavBar from './Components/NavBar';
-// import Login from './Components/Login';
-// // import Profile from './Components/Profile'
-// import { observer, inject } from 'mobx-react';
-// import Register from './Components/Register';
+// import Login from './Components/auth/Login';
+// import Profile from './Components/auth/Profile';
+// import Register from './Components/auth/Register';
 // import Home from './Components/Home';
-// import { Button } from '@material-ui/core';
-// import AuthApi from './auth/auth';
+// import AuthApi from './Components/auth/auth';
 // import Cookies from 'js-cookie';
 
+//  export default function App( props ){
+//     const [auth, setAuth] = React.useState(false); 
 
-// function App() {
-//   const [currentUser, setCurrentUser] = useState('')
-//    const [isLoggedIn, setIsLoggedIn] = useState(false)
-//    const [loading, setLoading] = useState(true)
-//    const [auth, setAuth] = React.useState(false);
 
-//    const readCookie = () => {
-//      const user = Cookies.get("user")
-//      if(user){
-//        setAuth(true)
-//      }
-//    }
-//   React.useEffect(()=>{
-//     readCookie();
-//   }, [])
-
-//     return (
-//         <div className="App">
-//         <AuthApi.Provider value={auth,setAuth}>
-//         <Router>
-//               <NavBar/>
-//               <Routes/>
-//               <Route excat path="/" exact render={() => <Home />}></Route>
-//               <Route excat path="/Members" exact render={() => <Members />}></Route>
-//               <Route excat path="/Transformers" exact render={() => <Transformers/>}></Route>
-//         </Router>
-//         </AuthApi.Provider>
-//           </div>
-//       )
-//       }
-  
-//     function LoginAuth () {
-//       console.log('hola')
-//       const Auth = React.useContext(AuthApi)
-//       const handleOnClick = () => {
-//        Auth.setAuth(true);
-//        Cookies.set("user","loginTrue")
-//       }
-//     return(
-//         <div>
-//            <Button onClick={handleOnClick}>Login</Button>
-//         </div>
-//     )
+//     const readCookies = () =>{
+//         const user = Cookies.get("user");
+//         if(user){
+//             setAuth(true);
+//         }
 //     }
-
-//     const Profile = () => {
-//       const Auth = React.useContext(AuthApi)
-//       const handleOnClick= ()=>{
-//        Auth.setAuth(false)
-//        Cookies.remove("user")
-//       }
-//         return(
-//             <div>
-//                 <h1> Profile </h1>
-//                 <Button onClick={handleOnClick}>Logout</Button>
+//     React.useEffect(()=>{
+//         readCookies();
+//     },[])
+    
+//         return (
+//             <div className="App">
+//                 <AuthApi.Provider value={{auth,setAuth}}>
+//                 <Router>
+//                     <NavBar />
+//                     <Route excat path="/" exact render={() => <Home />}></Route>
+//                     <Route excat path="/Members" exact render={() => <Members />}></Route>
+//                     <Route excat path="/Transformers" exact render={() => <Transformers/>}></Route>
+//                    <Routes/>
+//                 </Router>
+//                 </AuthApi.Provider>
 //             </div>
 //         )
-//         }
-    
-
-//     const Routes = ()=>{
-//       const Auth = React.useContext(AuthApi)
-//       return(
-//         <Switch>
-//           <ProtectedLogin path="/login" login={LoginAuth} component={Login} auth={Auth.auth}/>
-//           <ProtectedRegister path="/Register" component={Register} auth={Auth.auth}/>
-//           <ProtectedProfile path="/Profile" component={Profile} auth={Auth.auth}/>
-//         </Switch>
-//       )
 //     }
-    
-//     const ProtectedProfile = ({auth,component:Component,...rest}) =>{
-//       return(
+
+//  export const LoginAuth = (props)=> {
+//      const Auth = React.useContext(AuthApi)
+//      const clickHandler = () => {
+//         Auth.setAuth(true);
+//         Cookies.set("user", "loginTrue")
+// }
+// return(
+//     <div>
+//         <button onClick={clickHandler}>Profile</button>
+//     </div>
+// )
+// }
+
+//  export const LogoutAuth = (props)=>{
+//     const Auth = React.useContext(AuthApi)
+//     const clickHandler = () => {
+//        Auth.setAuth(false);
+//        Cookies.remove("user");
+//    }
+// return(
+//    <div>
+//    <button onClick={clickHandler}>Logout</button>
+//    </div>
+// )
+// }
+
+// const Routes = (props) =>{
+//     const Auth = React.useContext(AuthApi)
+//     return(
+//         <Switch>
+//             <ProtectedLogin path="/Login" auth={Auth.auth} component={Login}/>
+//             <ProtectedProfile path="/Profile" auth={Auth.auth} component={Profile}/>
+//             <ProtectedRegister path="/Register" auth={Auth.auth} component={Register}/>
+//         </Switch>
+//     )
+// }
+
+// const ProtectedProfile = ({auth,component:Component, ...rest}) =>{
+//     return (
 //         <Route
 //         {...rest}
 //         render = {()=>auth? (
-//           <Component/>
+//             <Component auth={auth}/>
 //         ):
 //         (
-//           <Redirect to="/login"/>
+//          <Redirect to="/Login"/>
 //         )
-//       }
-//         />
-//       )
 //     }
-    
-//     const ProtectedLogin = ({auth,component:Component,...rest}) =>{
-//       return(
-//         <Route
-//         {...rest}
-//         render = {()=>!auth? (
-//           <Component/>
-//         ):
-//         (
-//           <Redirect to="/Profile"/>
-//         )
-//       }
 //         />
-//       )
-//     }
+//     )
+// } 
 
-//     const ProtectedRegister = ({auth,component:Component,...rest}) =>{
-//       return(
+// const ProtectedLogin = ({auth,component:Component, ...rest}) =>{
+//     return (
 //         <Route
 //         {...rest}
 //         render = {()=>!auth? (
-//           <Component/>
+//             <Component auth={auth}/>
 //         ):
 //         (
-//           <Redirect to="/Profile"/>
+//          <Redirect to="/Profile"/>
 //         )
-//       }
-//         />
-//       )
 //     }
-//     export default App;
+//         />
+//     )
+// } 
+
+// const ProtectedRegister = ({auth,component:Component, ...rest}) =>{
+//     return (
+//         <Route
+//         {...rest}
+//         render = {()=>!auth? (
+//             <Component auth={auth}/>
+//         ):
+//         (
+//          <Redirect to="/Profile"/>
+//         )
+//     }
+//         />
+//     )
+// } 
+
+
+

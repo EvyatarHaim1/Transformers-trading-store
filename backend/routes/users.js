@@ -49,6 +49,7 @@ router.route('/getUsersFromDB').get(async(req, res) => {
 
 
  router.route('/loginUser').post(async(req, res) => {
+     console.log(req.body)
      const Email = req.body.auth.loginUser.email.toLowerCase()
      const Password = req.body.auth.loginUser.password.toLowerCase()
      if(!Password){

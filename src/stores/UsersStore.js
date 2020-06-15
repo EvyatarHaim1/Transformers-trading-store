@@ -3,12 +3,26 @@ import { user } from './user'
 import axios from 'axios';
 
  export class UsersStore {
-    @observable.ref users=[];
-    @observable.ref isLoggedIn = false
-    @observable.ref loading = true
-    @observable.ref currentUser= ""
-    @observable.ref countries= []
-    
+     @observable.ref users=[];
+     @observable.ref isLoggedIn = false
+     @observable.ref loading = true
+     @observable.ref username= ""
+     @observable.ref currentUser= ""
+     @observable.ref countries= []
+
+
+
+  setLoader(loading) {
+    this.loading = loading;
+  }
+  setAuth(token) {
+    this.authenticated = token;
+  }
+  initialize(auth0) {
+    this.auth0 = auth0;
+  }
+
+
     @action fetch_Users_Api = async()=>{
        await axios.get(`http://localhost:4200/users/getUsersFromApi`)     
 }
@@ -28,8 +42,6 @@ import axios from 'axios';
   this.countries=countries.data
   }
   
-
-
 @action searchByCategory = (category, text) => {
   console.log(category,text)
   if(text){
@@ -70,5 +82,4 @@ import axios from 'axios';
 
 
 }
-
 

@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import { observer, inject } from 'mobx-react'
 import moment from 'moment'
 
-
-@inject('us')
+@inject('us', 'ps')
 @observer
 class MembersDetails extends Component {
    constructor(){

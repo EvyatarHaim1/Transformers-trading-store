@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import './../App.css';
+import '../../App.css';
 import { observer, inject } from 'mobx-react'
 import EditUser from './EditUser';
 import { Button } from '@material-ui/core';
+import Cart from '../Cart'
 
 @inject('us')
 @observer
@@ -37,11 +38,16 @@ editUser = async()=> {
 }
 }
 
+logout = async()=>{
+  
+}
+
     render() {
   return (
       <div className={"userContainer"}>
         <h1 id={"welcomeUser"}> welcome <br/>{this.state.firstName} {this.state.lastName}</h1>
         <ul className={"userDetails"}>
+        <li><Button style={{backgroundColor: '#867979', color: 'white'}}> Logout </Button></li>
         <li><Button style={{backgroundColor: '#867979', color: 'white'}} onClick={this.editUser}> Edit User </Button></li>
           <li> <img alt={"userPic"} className="userPic" src ={this.state.picture}/> </li>
           <li> Email: {this.state.email}</li>

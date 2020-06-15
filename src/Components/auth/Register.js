@@ -97,7 +97,7 @@ class Register extends Component {
                       name="lastname" onChange={this.handleInput} required> </Input></li>   
                   <li><FaCity/> City <br></br> <Input className='a' type="text" placeholder="city" 
                       name="city" onChange={this.handleInput} required> </Input></li>
-                  <li> <FaLock/> Password <br></br>  <Input className='a' type="text" placeholder="password" 
+                  <li> <FaLock/> Password <br></br>  <Input className='a' type="password" placeholder="password" 
                       name="password" onChange={this.handleInput} required> </Input></li>
                   <li> <FaEnvelope/> Email <br></br> <Input className='b' type="text" placeholder="email" 
                       name="email" onChange={this.handleInput} required> </Input></li>

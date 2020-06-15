@@ -3,10 +3,11 @@ import {AppBar, Toolbar, IconButton, MenuList, MenuItem} from '@material-ui/core
 import MenuIcon from '@material-ui/icons/Menu';
 import { Link } from "react-router-dom";
 import { observer, inject } from 'mobx-react';
-import Register from './auth/Register';
-import Login from './auth/Login';
+import Register from './Auth/Register';
+import Login from './Auth/Login';
+import Profile from './Auth/Profile';
 
-@inject('us')
+@inject('us','store')
 @observer
   class NavBar extends Component {
     constructor(props) {
@@ -15,7 +16,6 @@ import Login from './auth/Login';
           logedIn:this.props.us.isLoggedIn
         })
        }
-  
     render() {
       
 
@@ -39,10 +39,8 @@ import Login from './auth/Login';
               Register
               </MenuItem>
               <MenuItem className="Link" component={Link} to="/Login">
-              {this.props.us.isLoggedIn? 'Logout' : 'Login'}
-              </MenuItem>
-              <MenuItem className="Link" component={Link} to="/Profile">
-              {this.props.us.isLoggedIn? this.props.us.currentUser.picture : null}
+              {this.props.us.currentUser? ' Profile ' : ' Login '}
+              {this.props.us.currentUser? <img className={"userPicNav"} src={this.props.us.currentUser.picture}/> : null}
               </MenuItem>
             </MenuList>
         </Toolbar>
