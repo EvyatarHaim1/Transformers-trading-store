@@ -1,3 +1,58 @@
+
+
+
+Build a "Transformers" (yes yes... like רובוטריקים) merchandise trading store.
+2. The store should be a website (desktop only) that allows both sellers and buyers to trade (the sellers to post merchandise for sale and the buyers to be able to buy it)
+3. You dont have to implement any real payment system. A simple "balance" feature for each user for each bought or sold transaction should decrease or increase the user's cash balance in the system (which is of course displayed somewhere)
+4. You'll need a simple registration system (as stupid as it gets).
+5. Each user should have a user page with his relevant info (from the registration) and credit balance
+
+Important notes:
+1. You can pick any technology/ programming language you like for the website and it's backend (ReactJS and Node.js should do the trick, but are totally up to you).
+2. The user registration data and transaction info should be stored in a DB of your choice (some SQL, MongoDB, Cassandra, etc.)
+3. The site should have a logging system and the logs should be written to some centralized sytem (pick whatever you like, as long as it's not plain terminal printing or storing the logs in a local filesystem).
+4. You don't have actually to build a deployment to the systems from the previous 2 items (2 and 3). Using a publically accessible system (like Mongo Atlas) or a local installation (with provided installation instructions) of those systems is good enough.
+5. The desired result is that I can boot your application on my workstation (pick your preferred OS - Windows, MacOS or Linux) and it would function properly.
+
+A few bonuses:
+1. Pretty UI is big bonus.
+2. Small, reusable components, divided into small functions and classes are a BIG bonus.
+3. Propper logging throughout the system to document events and help with debugging.
+4. Being able to deploy the logging system and the DB.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
