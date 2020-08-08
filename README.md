@@ -5,6 +5,7 @@ There is a simple "balance" feature for each user for each bought or sold transa
 There is also a registration system and a logging system. each user have a user page with his relevant info and credit balance.
 
 The technologies are :
+MERN application - MongoDB | Express | React | Node.js
 
 * ReactJS - on the Frontend.
 * Node.js with Express - on the server & Backend.
