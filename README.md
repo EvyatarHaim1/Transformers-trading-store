@@ -12,6 +12,13 @@ MERN application - MongoDB | Express | React | Node.js
 * MongoDB Atlas - The user registration data and transaction info stored in the DB.
 * Firebase - used to store a new user's image as a URL and then insert this URL to DB.
 
+![alt text](https://github.com/EvyatarHaim1/Transformers-trading-store/blob/master/src/images/1.png?raw=true)
+
+![alt text](https://github.com/EvyatarHaim1/Transformers-trading-store/blob/master/src/images/2.png?raw=true)
+
+![alt text](https://github.com/EvyatarHaim1/Transformers-trading-store/blob/master/src/images/3.png?raw=true)
+
+
 
 
 
